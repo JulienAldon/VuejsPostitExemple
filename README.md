@@ -1,4 +1,10 @@
-# projet
+# Vuejs Exemple
+
+## À vous de jouer: 
+- Ajouter un moyen de modifier le content d'un postit
+- Ajouter un moyen de modifier le titre d'un postit
+- Supprimer un PostIt
+- Supprimer une Note d'un PostIt
 
 ## Project setup
 ```
