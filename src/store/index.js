@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { ROOTFQDN } from '../config.js'
 
 const store = createStore({
     state: {
@@ -22,7 +23,7 @@ const store = createStore({
     actions: {
         addPostIt(store, obj) {
             store.commit('addPostIt', obj)
-            fetch('http://5.135.119.239:3090/notes', {
+            fetch(ROOTFQDN + 'notes', {
                 method: 'POST',
                 headers: {
                     "Content-Type": "application/json",
@@ -33,7 +34,7 @@ const store = createStore({
             })
         },
         async initApp(store) {
-            const obj = await fetch('http://5.135.119.239:3090/notes').then((data) => {
+            const obj = await fetch(ROOTFQDN + 'notes').then((data) => {
                 return data.json()
             })
 
